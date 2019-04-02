@@ -152,12 +152,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="configuration.h" />
     <ClInclude Include="engine.h" />
+    <ClInclude Include="paterns.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="configuration.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="Game-Of-Live.cpp" />
+    <ClCompile Include="paterns.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -167,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="RLE\copperhead.RLE" />
+    <None Include="RLE\glider.RLE" />
+    <None Include="RLE\queenbeeshuttle.rle" />
     <None Include="settings.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
