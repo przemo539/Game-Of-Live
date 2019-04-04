@@ -4,6 +4,8 @@
 
 void paterns::create_list_of_paterns()
 {
+	patern.clear();
+	name_of_patern.clear();
 	try {
 		for (const auto & entry : fs::directory_iterator(path)) {
 			std::fstream file(entry.path(), std::ios::in);
@@ -20,6 +22,7 @@ void paterns::create_list_of_paterns()
 			}
 			file.close();
 			patern.emplace( ((finded) ? data : fs::path(entry.path()).filename()).string(), entry.path().string() );
+			name_of_patern.push_back(((finded) ? data : fs::path(entry.path()).filename()).string());
 		}
 	}
 	catch (const fs::filesystem_error& ex)
@@ -64,19 +67,25 @@ patern2load paterns::get_patern(std::string name)
 	return data;
 }
 
-void paterns::set_patern(patern2load pat, std::string filename, std::string name_of_patern)
+void paterns::set_patern(patern2load pat, std::string filename,  std::string name_of_patern)
 {
+	//name_of_patern.push_back(name_of_patern);
 	std::ofstream file;
 	auto temp_path = path;
 	temp_path += "/" + filename;
 	file.open(temp_path);
-
 	patern.emplace(name_of_patern, temp_path.string());
+	
 	file << "#N " + name_of_patern << '\n';
 	file << "#C This is a " + name_of_patern + "." << '\n';
 	file << "x = " + std::to_string(pat.x) + ", y = " + std::to_string(pat.y) << '\n';
 	file << pat.patern;
 	file.close();
+}
+
+std::vector<std::string> paterns::get_list_paterns()
+{
+	return name_of_patern;
 }
 
 paterns::paterns()

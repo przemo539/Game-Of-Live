@@ -16,14 +16,24 @@ void configuration::read_settings()
 	settings_file.close();
 }
 
-int configuration::get_size_x()
+unsigned int configuration::get_size_x()
 {
 	return size_x;
 }
 
-int configuration::get_size_y()
+unsigned int configuration::get_size_y()
 {
 	return size_y;
+}
+
+unsigned int configuration::get_h_resolution()
+{
+	return h_resolution;
+}
+
+unsigned int configuration::get_v_resolution()
+{
+	return v_resolution;
 }
 
 void configuration::read()
@@ -31,8 +41,10 @@ void configuration::read()
 	try
 	{
 		fileOptions.add_options()
-			("size_y", po::value<int>(&size_y), "Size y of grid")
-			("size_x", po::value<int>(&size_x), "Size x of grid");
+			("size_y", po::value<unsigned int>(&size_y), "Size y of grid")
+			("size_x", po::value<unsigned int>(&size_x), "Size x of grid")
+			("horizontal_resolution", po::value<unsigned int>(&h_resolution), "Horizontal screen resolutiond")
+			("vertical_resolution", po::value<unsigned int>(&v_resolution), "Vertical screen resolution");
 		read_settings();
 	}
 	catch (const po::error &ex)
@@ -54,6 +66,8 @@ configuration::configuration()
 {
 	size_x = 0;
 	size_y = 0;
+	h_resolution = 0;
+	v_resolution = 0;
 	path = "settings.ini";
 }
 
@@ -61,6 +75,8 @@ configuration::configuration(std::string path)
 {
 	size_x = 0;
 	size_y = 0;
+	h_resolution = 0;
+	v_resolution = 0;
 	this->path = path;
 }
 
