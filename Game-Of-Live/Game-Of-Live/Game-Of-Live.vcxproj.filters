@@ -80,6 +80,9 @@
     <None Include="RLE\glider.RLE">
       <Filter>Pliki zasobów\RLE</Filter>
     </None>
+    <None Include="RLE\new_name.RLE">
+      <Filter>Pliki zasobów\RLE</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Font Include="arial.ttf">
