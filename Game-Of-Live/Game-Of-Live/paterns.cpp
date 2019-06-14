@@ -36,7 +36,31 @@ patern2load paterns::get_patern(std::string name)
 {
 	patern2load data;
 	auto pos = patern.find(name);
-	if (pos == patern.end()) {
+	if (name == "!!RANDOM!!!") {
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<> dis(5, 20);
+		std::uniform_int_distribution<> dis2(0, 3);
+		std::uniform_int_distribution<> disBool(0, 1);
+		data.x = dis(gen);
+		data.y = dis(gen);
+		std::string paternbuf;
+		for (int i = 0; i < data.x; i++)
+		{
+			for (int j = 0; j< data.y; j++) {
+				int num = dis2(gen);
+				if(num + j < data.y)
+					paternbuf += std::to_string(num) + (disBool(gen)?"b":"o");
+				else
+					paternbuf += std::to_string(data.y - j) + (disBool(gen) ? "b" : "o");
+				j += num;
+			}
+			paternbuf += "$";
+		}
+		paternbuf.erase(paternbuf.size() - 1);
+		paternbuf += "!";
+		data.patern = paternbuf;
+	}else if (pos == patern.end()) {
 		data.x = data.y = 0;
 		data.patern = "!";
 	}

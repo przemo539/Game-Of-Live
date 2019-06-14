@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="configuration">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEgQBgCgCACCABAEACAAAAAAAAACAAAAEA=</HashCode>
+      <FileName>configuration.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cell">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAiAAAQAAAAMgAAIIAAAQAAABBAAAAAgAgAAIABCA=</HashCode>
+      <FileName>cell.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="engine">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAABAAAAAAIACgAYBAAiCAgASgAAIIMECCEgQQcCA=</HashCode>
+      <FileName>engine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="game">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="game::GameState">
+        <TypeIdentifier>
+          <NewMemberFileName>game.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgIAAAASAAAAAABgAAAAAAgABACAAAAMAAAAAAwAAAI=</HashCode>
+      <FileName>game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="paterns">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAFQAAACgAAAAAAAgAIAAAABAAAAAAE=</HashCode>
+      <FileName>paterns.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="patern2load">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>patern2load.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

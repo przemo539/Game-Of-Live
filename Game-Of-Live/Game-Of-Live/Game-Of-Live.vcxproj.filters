@@ -80,9 +80,10 @@
     <None Include="RLE\glider.RLE">
       <Filter>Pliki zasobów\RLE</Filter>
     </None>
-    <None Include="RLE\new_name.RLE">
+    <None Include="RLE\oscylator.RLE">
       <Filter>Pliki zasobów\RLE</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="arial.ttf">

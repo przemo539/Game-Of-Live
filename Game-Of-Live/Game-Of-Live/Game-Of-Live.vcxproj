@@ -192,10 +192,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
     <None Include="RLE\copperhead.RLE" />
     <None Include="RLE\glider.RLE" />
-    <None Include="RLE\new_name.RLE" />
+    <None Include="RLE\oscylator.RLE" />
     <None Include="RLE\queenbeeshuttle.rle" />
     <None Include="settings.ini" />
   </ItemGroup>
